@@ -2,6 +2,7 @@ package com.sushanthande.portfolio.pages
 
 import androidx.compose.runtime.*
 import com.sushanthande.portfolio.PageContentStyle
+import com.sushanthande.portfolio.components.sections.About
 import com.sushanthande.portfolio.components.sections.Home
 import com.sushanthande.portfolio.components.sections.NavHeader
 import com.sushanthande.portfolio.utils.Res
@@ -33,6 +34,8 @@ fun HomePage() {
             Box {
                 Column {
                     Home(ctx = pageContext)
+
+                    About()
                 }
             }
         }

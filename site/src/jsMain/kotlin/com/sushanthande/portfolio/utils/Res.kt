@@ -17,4 +17,10 @@ object Res {
         const val PROJECTS_TITLE = "projects"
         const val RECOMMENDATIONS_TITLE = "recommendations"
     }
+
+    object Font {
+        const val MONTSERRAT_EXTRA_BOLD = "Montserrat-ExtraBold"
+        const val MONTSERRAT_SEMI_BOLD = "Montserrat-SemiBold"
+        const val MONTSERRAT_BLACK = "Montserrat-Black"
+    }
 }

@@ -52,7 +52,7 @@ fun NavHeader(modifier: Modifier) {
 
 @Composable
 private fun NavLink(path: String, text: String) {
-    Link(path, text, variant = UndecoratedLinkVariant.then(UncoloredLinkVariant), modifier = Modifier.fontFamily("Montserrat-Black"))
+    Link(path, text, variant = UndecoratedLinkVariant.then(UncoloredLinkVariant), modifier = Modifier.fontFamily(Res.Font.MONTSERRAT_BLACK))
 }
 
 @Composable
