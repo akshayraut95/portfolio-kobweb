@@ -4,12 +4,11 @@ import androidx.compose.runtime.Composable
 import com.sushanthande.portfolio.SectionTitleStyle
 import com.sushanthande.portfolio.SubHeadLineTextStyle
 import com.sushanthande.portfolio.utils.Res
-import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.color
-import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
+import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
@@ -32,7 +31,7 @@ fun SectionTitle(
                             ColorMode.DARK -> Colors.White
                         }
                     )
-                    .fontWeight(FontWeight.Bold)
+                    .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
             )
         }
     }
