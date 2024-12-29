@@ -2,6 +2,7 @@ package com.sushanthande.portfolio.pages
 
 import androidx.compose.runtime.*
 import com.sushanthande.portfolio.PageContentStyle
+import com.sushanthande.portfolio.components.sections.About
 import com.sushanthande.portfolio.components.sections.Home
 import com.sushanthande.portfolio.components.sections.NavHeader
 import com.sushanthande.portfolio.utils.Res
@@ -15,12 +16,12 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.style.toModifier
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.browser.document
 import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.fr
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.dom.Text
 
 @Page
 @Composable
@@ -29,10 +30,12 @@ fun HomePage() {
     Row(
         Modifier.fillMaxWidth()
     ) {
-        PageLayout(Res.String.TITLE) {
+        PageLayout(Res.String.NAME) {
             Box {
                 Column {
                     Home(ctx = pageContext)
+
+                    About(colorMode = ColorMode.current)
                 }
             }
         }

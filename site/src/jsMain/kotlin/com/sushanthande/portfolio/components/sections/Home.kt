@@ -57,7 +57,7 @@ fun Home(
 
             SpanText(
                 text = "Hey, It's Sushant Hande",
-                modifier = Modifier.fontFamily("Montserrat-ExtraBold")
+                modifier = Modifier.fontFamily(Res.Font.MONTSERRAT_EXTRA_BOLD)
                     .padding(top = 10.px)
                     .color(
                         when (ColorMode.current) {
@@ -71,7 +71,7 @@ fun Home(
                 text = "Kotlin Multiplatfrom Developer",
                 modifier = Modifier.fontSize(FontSize.XLarge)
                     .padding(top = 10.px)
-                    .fontFamily("Montserrat-SemiBold")
+                    .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
                     .color(
                         when (ColorMode.current) {
                             ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
