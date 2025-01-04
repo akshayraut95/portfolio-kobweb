@@ -2,6 +2,7 @@ package com.sushanthande.portfolio.components.sections
 
 import androidx.compose.runtime.Composable
 import com.sushanthande.portfolio.HeroSectionStyle
+import com.sushanthande.portfolio.IconsStyle
 import com.sushanthande.portfolio.components.widgets.SectionTitle
 import com.sushanthande.portfolio.models.SkillItem
 import com.sushanthande.portfolio.utils.DataRepository
@@ -62,7 +63,7 @@ fun Skills() {
 
 @Composable
 fun SkillItem(skillItem: SkillItem, modifier: Modifier) {
-    Column(modifier.fillMaxWidth().padding(20.px), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(IconsStyle.toModifier().then(modifier.fillMaxWidth().padding(20.px)), horizontalAlignment = Alignment.CenterHorizontally) {
         Image(
             src = skillItem.drawable,
             modifier = Modifier.size(42.px)

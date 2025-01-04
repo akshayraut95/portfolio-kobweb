@@ -6,6 +6,7 @@ import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.silk.SilkStyleSheet.hover
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.forms.ButtonVars
 import com.varabyte.kobweb.silk.style.CssStyle
@@ -39,9 +40,15 @@ val UncoloredButtonVariant = ButtonStyle.addVariantBase {
     Modifier.setVariable(ButtonVars.BackgroundDefaultColor, Colors.Transparent)
 }
 
+val IconsStyle = CssStyle {
+    hover {
+        Modifier.scale(1.2)
+    }
+}
+
 val ShareButtonStyle = CssStyle {
     hover {
-        Modifier.cursor(Cursor.Pointer)
+        Modifier.cursor(Cursor.Pointer).scale(1.2)
     }
 }
 
