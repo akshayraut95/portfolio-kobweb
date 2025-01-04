@@ -5,6 +5,7 @@ import com.sushanthande.portfolio.PageContentStyle
 import com.sushanthande.portfolio.components.sections.About
 import com.sushanthande.portfolio.components.sections.Home
 import com.sushanthande.portfolio.components.sections.NavHeader
+import com.sushanthande.portfolio.components.sections.Skills
 import com.sushanthande.portfolio.utils.Res
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -36,6 +37,8 @@ fun HomePage() {
                     Home(ctx = pageContext)
 
                     About(colorMode = ColorMode.current)
+
+                    Skills()
                 }
             }
         }

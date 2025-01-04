@@ -43,13 +43,8 @@ fun About(colorMode: ColorMode) {
                     condition = breakpoint > Breakpoint.MD,
                     other = Modifier.height(600.px)
                 )
-                .boxShadow(
-                    color = Colors.Black.copy(alpha = 10),
-                    blurRadius = 50.px,
-                    spreadRadius = 50.px
-                )
                 .padding(all = 12.px)
-                .border(1.px, LineStyle.Solid, when (ColorMode.current) {
+                .border(0.1.px, LineStyle.Solid, when (ColorMode.current) {
                     ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
                     ColorMode.DARK -> Res.Colors.WHITE
                 })
