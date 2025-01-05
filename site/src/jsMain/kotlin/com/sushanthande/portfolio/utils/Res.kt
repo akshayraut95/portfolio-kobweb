@@ -37,6 +37,10 @@ object Res {
         const val ANDROID_JETPACK = "/images/skills/android-jetpack.png"
         const val ANDROID_STUDIO = "/images/skills/android-studio.png"
         const val JSON = "/images/skills/json.png"
+        const val HSBC = "/images/experience/hsbc.svg"
+        const val BAJAJ_MARKETS = "/images/experience/bajaj-markets.webp"
+        const val ENTRATA = "/images/experience/entrata.svg"
+        const val VERACITY_SOFTWARE = "/images/experience/veracity-software.png"
     }
 
 
