@@ -9,7 +9,6 @@ import com.sushanthande.portfolio.utils.Res
 import com.sushanthande.portfolio.utils.Res.String.EXPERIENCE_TITLE
 import com.varabyte.kobweb.browser.util.kebabCaseToTitleCamelCase
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
-import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
