@@ -6,7 +6,6 @@ import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.SilkStyleSheet.hover
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.forms.ButtonVars
 import com.varabyte.kobweb.silk.style.CssStyle

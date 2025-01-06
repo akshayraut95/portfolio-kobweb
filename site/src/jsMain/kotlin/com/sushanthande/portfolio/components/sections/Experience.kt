@@ -3,7 +3,7 @@ package com.sushanthande.portfolio.components.sections
 import androidx.compose.runtime.Composable
 import com.sushanthande.portfolio.HeroSectionStyle
 import com.sushanthande.portfolio.components.widgets.SectionTitle
-import com.sushanthande.portfolio.models.ExperienceItem
+import com.sushanthande.portfolio.models.ExperienceModel
 import com.sushanthande.portfolio.utils.DataRepository
 import com.sushanthande.portfolio.utils.Res
 import com.sushanthande.portfolio.utils.Res.String.EXPERIENCE_TITLE
@@ -39,14 +39,14 @@ fun Experience() {
             modifier = Modifier.fillMaxWidth().padding(20.px)
         ) {
             DataRepository.getExperiences().forEach { experienceItem ->
-                ExperienceItem(experienceItem = experienceItem)
+                ExperienceItem(experienceModel = experienceItem)
             }
         }
     }
 }
 
 @Composable
-fun ExperienceItem(experienceItem: ExperienceItem, modifier: Modifier = Modifier) {
+fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifier) {
     Column(modifier = modifier.border(
         0.1.px, LineStyle.Solid, when (ColorMode.current) {
             ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
@@ -55,7 +55,7 @@ fun ExperienceItem(experienceItem: ExperienceItem, modifier: Modifier = Modifier
     ).borderRadius(r = 8.px).padding(20.px).margin(10.px)) {
         Column(modifier = Modifier.padding(10.px)) {
             SpanText(
-                text = experienceItem.employerName,
+                text = experienceModel.employerName,
                 modifier = Modifier
                     .color(
                         when (ColorMode.current) {
@@ -63,12 +63,12 @@ fun ExperienceItem(experienceItem: ExperienceItem, modifier: Modifier = Modifier
                             ColorMode.DARK -> Colors.White
                         }
                     )
-                    .fontFamily(Res.Font.MONTSERRAT_BLACK)
+                    .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
                     .fontSize(15.px)
             )
 
             SpanText(
-                text = experienceItem.designation,
+                text = experienceModel.designation,
                 modifier = Modifier
                     .color(
                         when (ColorMode.current) {
@@ -82,7 +82,7 @@ fun ExperienceItem(experienceItem: ExperienceItem, modifier: Modifier = Modifier
             )
 
             SpanText(
-                text = experienceItem.duration,
+                text = experienceModel.duration,
                 modifier = Modifier
                     .color(
                         when (ColorMode.current) {
