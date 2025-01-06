@@ -38,6 +38,8 @@ fun HomePage() {
                     Skills()
 
                     Experience()
+
+                    Projects(ctx = pageContext)
                 }
             }
         }

@@ -18,6 +18,8 @@ object Res {
         const val RECOMMENDATIONS_TITLE = "recommendations"
         const val PROFESSION = "Kotlin Multiplaform Developer"
         const val ABOUT_ME = "A seasoned Kotlin Multiplatform Developer with 7 years of experience, specializing in crafting robust and performant applications. My journey includes in-depth expertise in native Android development using Kotlin and Core Java. I'm a strong advocate for leveraging AI tools to enhance productivity and innovation. Beyond coding, I'm an avid open-source contributor, an enthusiastic reader, and a keen sports enthusiast, particularly cricket. I also maintain a keen interest in exploring investment avenues and actively engage with political and societal issues."
+        const val DESCRIPTION = "Description"
+        const val GITHUB_URL = "https://github.com/Sushant-Hande"
     }
 
     object Drawable {
@@ -41,6 +43,13 @@ object Res {
         const val BAJAJ_MARKETS = "/images/experience/bajaj-markets.webp"
         const val ENTRATA = "/images/experience/entrata.svg"
         const val VERACITY_SOFTWARE = "/images/experience/veracity-software.png"
+        const val FIRST_DIRECT = "/images/projects/first-direct.webp"
+        const val BAJAJ_FINSERV = "/images/projects/bajaj-finserv.webp"
+        const val ENTRATA_FACILITIES = "/images/projects/entrata-facilities.webp"
+        const val PLAY_STORE = "/images/projects/play-store.svg"
+        const val GITHUB = "/images/projects/github.svg"
+        const val GITHUB_WHITE = "/images/projects/github-white.svg"
+        const val SMART_CAR = "/images/projects/smart-car.png"
     }
 
 
