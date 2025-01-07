@@ -4,7 +4,7 @@ import com.varabyte.kobweb.compose.ui.graphics.Color
 
 object Res {
     object Colors {
-        val GREEN_VOGUE = Color.rgb(0x000000)
+        val GREEN_VOGUE = Color.rgb(0x022d53)
         val WHITE = Color.rgb(0xffffff)
     }
 
