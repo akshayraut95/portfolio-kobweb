@@ -8,6 +8,7 @@ import com.sushanthande.portfolio.utils.DataRepository
 import com.sushanthande.portfolio.utils.Res
 import com.sushanthande.portfolio.utils.Res.String.EXPERIENCE_TITLE
 import com.varabyte.kobweb.browser.util.kebabCaseToTitleCamelCase
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -47,12 +48,11 @@ fun Experience() {
 
 @Composable
 fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifier) {
-    Column(modifier = modifier.border(
-        0.1.px, LineStyle.Solid, when (ColorMode.current) {
-            ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
-            ColorMode.DARK -> Res.Colors.WHITE
-        }
-    ).borderRadius(r = 8.px).padding(20.px).margin(10.px)) {
+    Column(
+        modifier = modifier.border(
+            0.1.px, LineStyle.Solid, Res.Colors.GREY
+        ).borderRadius(r = 8.px).padding(10.px).margin(10.px)
+    ) {
         Column(modifier = Modifier.padding(10.px)) {
             SpanText(
                 text = experienceModel.employerName,
@@ -93,6 +93,35 @@ fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifi
                     .fontFamily(Res.Font.MONTSERRAT_MEDIUM)
                     .fontSize(12.px)
                     .margin(top = 5.px)
+            )
+
+            SpanText(
+                text = Res.String.ROLE_AND_RESPONSIBILITIES.kebabCaseToTitleCamelCase(),
+                modifier = Modifier
+                    .color(
+                        when (ColorMode.current) {
+                            ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
+                            ColorMode.DARK -> Colors.White
+                        }
+                    )
+                    .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
+                    .fontSize(13.px)
+                    .margin(top = 10.px)
+            )
+
+            SpanText(
+                text = experienceModel.roleAndResponsibilities,
+                modifier = Modifier
+                    .color(
+                        when (ColorMode.current) {
+                            ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
+                            ColorMode.DARK -> Colors.White
+                        }
+                    )
+                    .fontFamily(Res.Font.MONTSERRAT_REGULAR)
+                    .fontSize(12.px).margin(top = 5.px).textAlign(
+                        TextAlign.Justify
+                    )
             )
         }
     }

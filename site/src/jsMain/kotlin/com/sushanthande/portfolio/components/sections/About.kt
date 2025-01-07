@@ -43,10 +43,7 @@ fun About(colorMode: ColorMode) {
                     other = Modifier.height(600.px)
                 )
                 .padding(all = 12.px)
-                .border(0.1.px, LineStyle.Solid, when (ColorMode.current) {
-                    ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
-                    ColorMode.DARK -> Res.Colors.WHITE
-                })
+                .border(0.1.px, LineStyle.Solid, Res.Colors.GREY)
                 .borderRadius(r = 8.px)
         ) {
             LeftSide(colorMode = colorMode, breakpoint = breakpoint)

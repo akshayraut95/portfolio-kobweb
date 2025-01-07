@@ -47,10 +47,7 @@ fun Skills() {
                 .fillMaxWidth()
                 .padding(all = 12.px)
                 .border(
-                    0.1.px, LineStyle.Solid, when (ColorMode.current) {
-                        ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
-                        ColorMode.DARK -> Res.Colors.WHITE
-                    }
+                    0.1.px, LineStyle.Solid, Res.Colors.GREY
                 )
                 .borderRadius(r = 8.px)
         ) {
