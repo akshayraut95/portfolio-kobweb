@@ -40,6 +40,8 @@ fun HomePage() {
                     Experience()
 
                     Projects(ctx = pageContext)
+
+                    Recommendations(ctx = pageContext)
                 }
             }
         }
