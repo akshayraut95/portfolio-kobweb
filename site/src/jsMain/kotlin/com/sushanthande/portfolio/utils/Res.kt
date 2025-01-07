@@ -23,6 +23,7 @@ object Res {
     }
 
     object Drawable {
+        // Skills
         const val ANDROID = "/images/tools/android.svg"
         const val FIGMA = "/images/tools/figma.svg"
         const val FIREBASE = "/images/tools/firebase.svg"
@@ -39,6 +40,8 @@ object Res {
         const val ANDROID_JETPACK = "/images/skills/android-jetpack.png"
         const val ANDROID_STUDIO = "/images/skills/android-studio.png"
         const val JSON = "/images/skills/json.png"
+
+        // Experience
         const val HSBC = "/images/experience/hsbc.svg"
         const val BAJAJ_MARKETS = "/images/experience/bajaj-markets.webp"
         const val ENTRATA = "/images/experience/entrata.svg"
@@ -46,10 +49,15 @@ object Res {
         const val FIRST_DIRECT = "/images/projects/first-direct.webp"
         const val BAJAJ_FINSERV = "/images/projects/bajaj-finserv.webp"
         const val ENTRATA_FACILITIES = "/images/projects/entrata-facilities.webp"
+
+        // Projects
         const val PLAY_STORE = "/images/projects/play-store.svg"
         const val GITHUB = "/images/projects/github.svg"
         const val GITHUB_WHITE = "/images/projects/github-white.svg"
         const val SMART_CAR = "/images/projects/smart-car.png"
+
+        // Recommendations
+        const val SHARE_ARROW = "images/linkedinrecommendations/share-arrow.png"
     }
 
 

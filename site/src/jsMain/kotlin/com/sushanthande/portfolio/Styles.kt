@@ -51,6 +51,12 @@ val ShareButtonStyle = CssStyle {
     }
 }
 
+val HoverCursorStyle = CssStyle{
+    hover {
+        Modifier.cursor(Cursor.Pointer)
+    }
+}
+
 val SubHeadLineTextStyle  = CssStyle.base {
     Modifier
         .fontSize(1.cssRem)
