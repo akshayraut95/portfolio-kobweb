@@ -1,11 +1,13 @@
 package com.sushanthande.portfolio
 
+import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.forms.ButtonVars
 import com.varabyte.kobweb.silk.style.CssStyle
@@ -54,6 +56,35 @@ val ShareButtonStyle = CssStyle {
 val HoverCursorStyle = CssStyle{
     hover {
         Modifier.cursor(Cursor.Pointer)
+    }
+}
+
+val FooterStyle  = CssStyle.base {
+    Modifier.padding(topBottom = 1.5.cssRem, leftRight = 10.percent)
+}
+
+val BackToTopButtonStyle = CssStyle {
+    base {
+        Modifier
+            .size(50.px)
+            .borderRadius(100.percent)
+            .margin(
+                right = 40.px,
+                bottom = 40.px
+            )
+            .cursor(Cursor.Pointer)
+            .styleModifier {
+                property("pointer-events", "auto")
+            }
+            .transition(
+                CSSTransition(
+                    property = "translate",
+                    duration = 200.ms, timingFunction = AnimationTimingFunction.Ease
+                )
+            )
+    }
+    hover {
+        Modifier.translateY((-10).px)
     }
 }
 

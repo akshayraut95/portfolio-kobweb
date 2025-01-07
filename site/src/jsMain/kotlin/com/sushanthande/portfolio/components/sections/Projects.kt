@@ -18,7 +18,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.PageContext
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
-import com.varabyte.kobweb.silk.components.layout.Surface
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
@@ -36,8 +35,6 @@ fun Projects(ctx: PageContext) {
         verticalArrangement = Arrangement.Center
     ) {
         SectionTitle(PROJECTS_TITLE.kebabCaseToTitleCamelCase())
-
-        Surface(modifier = Modifier.height(10.px)) {}
 
         SimpleGrid(
             numColumns = numColumns(base = 2, sm = 2, md = 3, lg = 3),

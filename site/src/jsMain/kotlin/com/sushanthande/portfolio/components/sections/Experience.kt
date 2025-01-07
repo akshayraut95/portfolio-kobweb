@@ -16,7 +16,6 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
-import com.varabyte.kobweb.silk.components.layout.Surface
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
@@ -32,8 +31,6 @@ fun Experience() {
         verticalArrangement = Arrangement.Center
     ) {
         SectionTitle(EXPERIENCE_TITLE.kebabCaseToTitleCamelCase())
-
-        Surface(modifier = Modifier.height(10.px)) {}
 
         SimpleGrid(
             numColumns = numColumns(base = 1, md = 3),

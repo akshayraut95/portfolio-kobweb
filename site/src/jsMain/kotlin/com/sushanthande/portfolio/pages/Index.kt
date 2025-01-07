@@ -3,6 +3,7 @@ package com.sushanthande.portfolio.pages
 import androidx.compose.runtime.*
 import com.sushanthande.portfolio.PageContentStyle
 import com.sushanthande.portfolio.components.sections.*
+import com.sushanthande.portfolio.components.widgets.BackToTopButton
 import com.sushanthande.portfolio.utils.Res
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -72,8 +73,14 @@ fun PageLayout(title: String, content: @Composable ColumnScope.() -> Unit) {
             ) {
                 content()
             }
+
+            BackToTopButton()
         }
+
+        Footer(Modifier.fillMaxWidth().gridRow(2))
+
     }
 
     NavHeader(modifier = Modifier.position(Position.Fixed).top(0.px))
+
 }

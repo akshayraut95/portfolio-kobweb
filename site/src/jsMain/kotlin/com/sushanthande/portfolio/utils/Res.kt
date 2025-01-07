@@ -22,6 +22,9 @@ object Res {
         const val DESCRIPTION = "Description"
         const val ROLE_AND_RESPONSIBILITIES = "Role and Responsibilities"
         const val GITHUB_URL = "https://github.com/Sushant-Hande"
+        const val LINKEDIN_URL = "https://www.linkedin.com/in/sushanthande/"
+        const val MEDIUM_URL = "https://medium.com/@sushanthande1"
+        const val X_URL = "https://x.com/SushantHande1"
     }
 
     object Drawable {

@@ -21,9 +21,9 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.PageContext
 import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.icons.fa.*
+import com.varabyte.kobweb.silk.components.icons.fa.FaLinkedin
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
-import com.varabyte.kobweb.silk.components.layout.Surface
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
@@ -41,8 +41,6 @@ fun Recommendations(ctx: PageContext) {
         verticalArrangement = Arrangement.Center
     ) {
         SectionTitle(RECOMMENDATIONS_TITLE.kebabCaseToTitleCamelCase())
-
-        Surface(modifier = Modifier.height(10.px)) {}
 
         SimpleGrid(
             numColumns = numColumns(base = 1, sm = 1, md = 1, lg = 1),
