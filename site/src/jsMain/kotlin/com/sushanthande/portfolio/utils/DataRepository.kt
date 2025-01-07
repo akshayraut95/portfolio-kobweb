@@ -31,7 +31,8 @@ object DataRepository {
                 designation = "Senior Software Engineer",
                 employerName = "HSBC",
                 duration = "Sept 23 - Sept 24",
-                logo = Res.Drawable.HSBC
+                logo = Res.Drawable.HSBC,
+                roleAndResponsibilities = "At HSBC, I worked as an Acting Team Lead of mobile team that consist of 3 iOS developers and 3 Android developers including me. I had a great experience working on First Direct Banking app. For the first time I worked on Scaled Agile framework. I also led team in quarterly Hackathon event where we won best presentation award 2 times, along with awards in few other categories."
             )
         )
         add(
@@ -39,7 +40,8 @@ object DataRepository {
                 designation = "Senior Software Engineer",
                 employerName = "Bajaj Markets",
                 duration = "Sept 21 - Sept 23",
-                logo = Res.Drawable.BAJAJ_MARKETS
+                logo = Res.Drawable.BAJAJ_MARKETS,
+                roleAndResponsibilities = "At Bajaj Markets, I worked on both in house projects and client projects. Related to in house projects, I specifically worked on developing Insurance SDK that is being used in both Bajaj Markets and Bajaj Finserv Android applications. During last 6 months of tenure, I got an opportunity to work on client project, Ambit Finvest, where I was leading the team of 3 Android developers including me."
             )
         )
         add(
@@ -47,7 +49,8 @@ object DataRepository {
                 designation = "Software Engineer",
                 employerName = "Entrata",
                 duration = "July 18 - Sept 21",
-                logo = Res.Drawable.ENTRATA
+                logo = Res.Drawable.ENTRATA,
+                roleAndResponsibilities = "Working at Entrata has made long lasting impact on my career. At Entrata, I was working as an individual contributor in the team of 3 Android developers. Strictly following coding standards and meeting deadlines made me more disciplined. I worked on Entrata Facilities app, that was my first project built using Kotlin programming language."
             )
         )
         add(
@@ -55,7 +58,8 @@ object DataRepository {
                 designation = "Software Engineer",
                 employerName = "Veracity Software",
                 duration = "OCt 17 - June 18",
-                logo = Res.Drawable.VERACITY_SOFTWARE
+                logo = Res.Drawable.VERACITY_SOFTWARE,
+                roleAndResponsibilities = "At Veracity Software, I worked as an Associate Android Deeveloper. This was the initial phase of my career, where I got to work on one IOT based proof of concept. This POC was being developed for Harmen International. The idea was to collect Car data like current location, speed, fuel status, crash reporting. Sensors from the vehicle were sending data to Firebase database and realtime updates were visible on the app side."
             )
         )
     }

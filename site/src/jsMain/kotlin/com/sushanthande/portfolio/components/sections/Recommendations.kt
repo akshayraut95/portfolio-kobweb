@@ -76,10 +76,7 @@ fun RecommendationItem(
     Column(
         modifier = HoverCursorStyle.toModifier().then(
             modifier.border(
-                0.1.px, LineStyle.Solid, when (ColorMode.current) {
-                    ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
-                    ColorMode.DARK -> Res.Colors.WHITE
-                }
+                0.1.px, LineStyle.Solid, Res.Colors.GREY
             ).borderRadius(r = 8.px).padding(10.px).margin(10.px)
         )
     ) {
@@ -178,7 +175,10 @@ fun RecommendationItem(
                     )
 
                     Image(
-                        src = Res.Drawable.SHARE_ARROW,
+                        src = when (ColorMode.current) {
+                            ColorMode.LIGHT -> Res.Drawable.SHARE_ARROW_DARK
+                            ColorMode.DARK -> Res.Drawable.SHARE_ARROW_LIGHT
+                        },
                         modifier = Modifier.size(24.px).margin(left = 10.px)
                     )
                 }

@@ -6,6 +6,7 @@ object Res {
     object Colors {
         val GREEN_VOGUE = Color.rgb(0x022d53)
         val WHITE = Color.rgb(0xffffff)
+        val GREY = Color.rgb(0x9ca7b8)
     }
 
     object String {
@@ -19,6 +20,7 @@ object Res {
         const val PROFESSION = "Kotlin Multiplaform Developer"
         const val ABOUT_ME = "A seasoned Kotlin Multiplatform Developer with 7 years of experience, specializing in crafting robust and performant applications. My journey includes in-depth expertise in native Android development using Kotlin and Core Java. I'm a strong advocate for leveraging AI tools to enhance productivity and innovation. Beyond coding, I'm an avid open-source contributor, an enthusiastic reader, and a keen sports enthusiast, particularly cricket. I also maintain a keen interest in exploring investment avenues and actively engage with political and societal issues."
         const val DESCRIPTION = "Description"
+        const val ROLE_AND_RESPONSIBILITIES = "Role and Responsibilities"
         const val GITHUB_URL = "https://github.com/Sushant-Hande"
     }
 
@@ -57,7 +59,8 @@ object Res {
         const val SMART_CAR = "/images/projects/smart-car.png"
 
         // Recommendations
-        const val SHARE_ARROW = "images/linkedinrecommendations/share-arrow.png"
+        const val SHARE_ARROW_LIGHT = "images/linkedinrecommendations/share-arrow-light.png"
+        const val SHARE_ARROW_DARK = "images/linkedinrecommendations/share-arrow-dark.png"
     }
 
 

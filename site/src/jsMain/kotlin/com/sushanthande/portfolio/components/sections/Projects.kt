@@ -56,10 +56,7 @@ fun Projects(ctx: PageContext) {
 fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onClick: (ProjectModel) -> Unit) {
     Column(
         modifier = modifier.border(
-            0.1.px, LineStyle.Solid, when (ColorMode.current) {
-                ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
-                ColorMode.DARK -> Res.Colors.WHITE
-            }
+            0.1.px, LineStyle.Solid, Res.Colors.GREY
         ).borderRadius(r = 8.px).padding(10.px).margin(10.px)
     ) {
         if (projectModel.name.isNotEmpty()) {
