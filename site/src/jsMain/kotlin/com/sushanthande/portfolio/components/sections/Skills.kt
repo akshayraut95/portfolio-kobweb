@@ -24,14 +24,12 @@ import com.varabyte.kobweb.silk.components.layout.Surface
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
-import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 
 @Composable
 fun Skills() {
-    val breakpoint = rememberBreakpoint()
 
     Column(
         modifier = HeroSectionStyle.toModifier().id(SKILLS_TITLE), horizontalAlignment = Alignment.CenterHorizontally,
@@ -39,7 +37,7 @@ fun Skills() {
     ) {
         SectionTitle(SKILLS_TITLE.kebabCaseToTitleCamelCase())
 
-        Surface(modifier = Modifier.height(10.px)) {}
+        Surface(modifier = Modifier.height(30.px)) {}
 
         SimpleGrid(
             numColumns = numColumns(base = 2, sm = 2, md = 3, lg = 4),

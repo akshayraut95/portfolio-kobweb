@@ -19,10 +19,7 @@ import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.forms.ButtonStyle
 import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.icons.fa.FaGithub
-import com.varabyte.kobweb.silk.components.icons.fa.FaLinkedin
-import com.varabyte.kobweb.silk.components.icons.fa.FaMedium
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
+import com.varabyte.kobweb.silk.components.icons.fa.*
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
@@ -39,7 +36,11 @@ fun Home(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
 
             Box(
                 modifier = Modifier.clip(shape = Circle()).height(350.px).width(350.px).background(
@@ -92,17 +93,22 @@ fun Home(
                 ) {
                     FaLinkedin(
                         modifier = ShareButtonStyle.toModifier().then(Modifier.margin(right = 10.px))
-                            .onClick { ctx.router.navigateTo("https://www.linkedin.com/in/sushanthande/") },
+                            .onClick { ctx.router.navigateTo(Res.String.LINKEDIN_URL) },
                         size = IconSize.XXS
                     )
                     FaGithub(
                         modifier = ShareButtonStyle.toModifier().then(Modifier.margin(right = 10.px))
-                            .onClick { ctx.router.navigateTo("https://github.com/Sushant-Hande") },
+                            .onClick { ctx.router.navigateTo(Res.String.GITHUB_URL) },
+                        size = IconSize.XXS
+                    )
+                    FaXTwitter(
+                        modifier = ShareButtonStyle.toModifier().then(Modifier.margin(right = 10.px))
+                            .onClick { ctx.router.navigateTo(Res.String.X_URL) },
                         size = IconSize.XXS
                     )
                     FaMedium(
                         modifier = ShareButtonStyle.toModifier().then(Modifier.margin(right = 10.px))
-                            .onClick { ctx.router.navigateTo("https://medium.com/@sushanthande1") },
+                            .onClick { ctx.router.navigateTo(Res.String.MEDIUM_URL) },
                         size = IconSize.XXS
                     )
                 }

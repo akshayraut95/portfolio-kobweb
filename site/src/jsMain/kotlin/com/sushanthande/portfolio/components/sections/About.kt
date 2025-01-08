@@ -32,7 +32,7 @@ fun About(colorMode: ColorMode) {
         verticalArrangement = Arrangement.Center){
         SectionTitle(ABOUT_TITLE.kebabCaseToTitleCamelCase())
 
-        Surface(modifier = Modifier.height(10.px)){}
+        Surface(modifier = Modifier.height(30.px)){}
 
         SimpleGrid(
             numColumns = numColumns(base = 1, md = 2),
