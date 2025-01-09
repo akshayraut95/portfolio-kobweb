@@ -1,11 +1,9 @@
 package com.sushanthande.portfolio.components.sections
 
 import androidx.compose.runtime.Composable
-import com.sushanthande.portfolio.HeroSectionStyle
-import com.sushanthande.portfolio.ShareButtonStyle
+import com.sushanthande.portfolio.*
 import com.sushanthande.portfolio.utils.CustomColorSchemes
 import com.sushanthande.portfolio.utils.Res
-import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -43,7 +41,7 @@ fun Home(
         ) {
 
             Box(
-                modifier = Modifier.clip(shape = Circle()).height(350.px).width(350.px).background(
+                modifier = ProfileImageStyle.toModifier().background(
                     when (ColorMode.current) {
                         ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
                         ColorMode.DARK -> Res.Colors.WHITE
@@ -52,13 +50,13 @@ fun Home(
             ) {
                 Image(
                     "/sushant.png", alt = "My image description",
-                    modifier = Modifier.clip(shape = Circle()).height(350.px).width(350.px)
+                    modifier = ProfileImageStyle.toModifier().clip(shape = Circle())
                 )
             }
 
             SpanText(
                 text = "Hey, It's Sushant Hande",
-                modifier = Modifier.fontFamily(Res.Font.MONTSERRAT_EXTRA_BOLD)
+                modifier = ProfileHeadingStyle.toModifier().fontFamily(Res.Font.MONTSERRAT_EXTRA_BOLD)
                     .padding(top = 10.px)
                     .color(
                         when (ColorMode.current) {
@@ -70,7 +68,7 @@ fun Home(
 
             SpanText(
                 text = "Kotlin Multiplatfrom Developer",
-                modifier = Modifier.fontSize(FontSize.XLarge)
+                modifier = DesignationStyle.toModifier()
                     .padding(top = 10.px)
                     .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
                     .color(
@@ -123,7 +121,6 @@ fun Home(
                 ) {
                     SpanText(
                         text = "Get in Touch",
-                        modifier = Modifier.fontFamily()
                     )
                 }
             }

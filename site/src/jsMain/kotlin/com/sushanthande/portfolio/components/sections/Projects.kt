@@ -37,7 +37,7 @@ fun Projects(ctx: PageContext) {
         SectionTitle(PROJECTS_TITLE.kebabCaseToTitleCamelCase())
 
         SimpleGrid(
-            numColumns = numColumns(base = 2, sm = 2, md = 3, lg = 3),
+            numColumns = numColumns(base = 1, sm = 2, md = 3, lg = 3),
             modifier = Modifier.fillMaxWidth().padding(20.px)
         ) {
             DataRepository.getProjects().forEach { projectModel ->

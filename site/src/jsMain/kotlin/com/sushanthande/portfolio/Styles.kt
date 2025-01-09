@@ -53,13 +53,13 @@ val ShareButtonStyle = CssStyle {
     }
 }
 
-val HoverCursorStyle = CssStyle{
+val HoverCursorStyle = CssStyle {
     hover {
         Modifier.cursor(Cursor.Pointer)
     }
 }
 
-val FooterStyle  = CssStyle.base {
+val FooterStyle = CssStyle.base {
     Modifier.padding(topBottom = 1.5.cssRem, leftRight = 10.percent)
 }
 
@@ -88,7 +88,7 @@ val BackToTopButtonStyle = CssStyle {
     }
 }
 
-val SubHeadLineTextStyle  = CssStyle.base {
+val SubHeadLineTextStyle = CssStyle.base {
     Modifier
         .fontSize(1.cssRem)
         .textAlign(TextAlign.Start)
@@ -106,7 +106,7 @@ val SectionTitleStyle = CssStyle {
         Modifier.fontSize(FontSize.XLarge)
     }
     Breakpoint.LG {
-        com.varabyte.kobweb.compose.ui.Modifier.fontSize(com.varabyte.kobweb.compose.css.FontSize.XXLarge)
+        Modifier.fontSize(FontSize.XXLarge)
     }
 }
 
@@ -124,35 +124,86 @@ val SectionDescriptionStyle = CssStyle {
             .margin(topBottom = 1.cssRem)
     }
     Breakpoint.LG {
-        com.varabyte.kobweb.compose.ui.Modifier.fontSize(com.varabyte.kobweb.compose.css.FontSize.Large)
+        Modifier.fontSize(FontSize.Large)
             .margin(topBottom = 2.cssRem)
     }
 }
+
+val ProfileImageStyle = CssStyle {
+    base {
+        Modifier
+            .size(200.px)
+            .borderRadius(100.percent)
+            .margin(0.px)
+    }
+    Breakpoint.SM {
+        Modifier.size(200.px)
+    }
+    Breakpoint.MD {
+        Modifier.size(250.px)
+    }
+    Breakpoint.LG {
+        Modifier.size(350.px)
+    }
+}
+
+val ProfileHeadingStyle = CssStyle {
+    base {
+        Modifier
+            .fontSize(20.px)
+    }
+    Breakpoint.SM {
+        Modifier.fontSize(25.px)
+    }
+    Breakpoint.MD {
+        Modifier.fontSize(30.px)
+    }
+    Breakpoint.LG {
+        Modifier.fontSize(40.px)
+    }
+}
+
+val DesignationStyle = CssStyle {
+    base {
+        Modifier
+            .fontSize(15.px)
+    }
+    Breakpoint.SM {
+        Modifier.fontSize(15.px)
+    }
+    Breakpoint.MD {
+        Modifier.fontSize(20.px)
+    }
+    Breakpoint.LG {
+        Modifier.fontSize(25.px)
+    }
+}
+
 
 val HeroSectionStyle = CssStyle {
     base {
         Modifier
             .width(100.percent)
             .fontSize(3.cssRem)
-            .height(100.vh)
+            .padding(top = 50.px)
     }
     Breakpoint.ZERO {
         Modifier
             .width(100.percent)
             .fontSize(2.5.cssRem)
-            .height(50.vh)
+            .padding(top = 50.px)
     }
     Breakpoint.SM {
         Modifier
             .width(100.percent)
             .fontSize(2.5.cssRem)
-            .height(50.vh)
+            .padding(top = 50.px)
     }
     Breakpoint.MD {
         Modifier
             .width(100.percent)
             .fontSize(2.75.cssRem)
-            .height(85.vh)
+            .padding(top = 50.px)
     }
     Breakpoint.LG {
         Modifier
