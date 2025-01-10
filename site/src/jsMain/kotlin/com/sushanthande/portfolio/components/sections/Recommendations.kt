@@ -26,7 +26,9 @@ import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.shapes.Rect
 import com.varabyte.kobweb.silk.theme.shapes.clip
@@ -36,7 +38,7 @@ import org.jetbrains.compose.web.css.px
 @Composable
 fun Recommendations(ctx: PageContext) {
     Column(
-        modifier = HeroSectionStyle.toModifier().id(RECOMMENDATIONS_TITLE),
+        modifier = HeroSectionStyle.toModifier().id(RECOMMENDATIONS_TITLE).padding(bottom = if (rememberBreakpoint() == (Breakpoint.ZERO) || rememberBreakpoint() == (Breakpoint.SM)) 20.px else 0.px),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -147,16 +149,16 @@ fun RecommendationItem(
 
         } else {
             Column(
-                modifier = modifier.fillMaxSize(),
+                modifier = modifier.fillMaxSize().padding(topBottom = if (rememberBreakpoint() == (Breakpoint.ZERO) || rememberBreakpoint() == (Breakpoint.SM)) 15.px else 0.px).onClick { onClick(recommendationModel) },
                 verticalArrangement = Arrangement.Center,
             ) {
                 Row(
-                    HoverCursorStyle.toModifier().onClick { onClick(recommendationModel) },
+                    HoverCursorStyle.toModifier(),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     FaLinkedin(
                         modifier = Modifier.margin(left = 10.px),
-                        size = IconSize.XXS
+                        size = IconSize.XS
                     )
 
                     SpanText(
