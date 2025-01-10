@@ -7,6 +7,7 @@ object Res {
         val GREEN_VOGUE = Color.rgb(0x022d53)
         val WHITE = Color.rgb(0xffffff)
         val GREY = Color.rgb(0x9ca7b8)
+        val GREY_DARK = Color.rgb(0x606060)
     }
 
     object String {
@@ -69,6 +70,7 @@ object Res {
 
     object Font {
         const val MONTSERRAT_EXTRA_BOLD = "Montserrat-ExtraBold"
+        const val MONTSERRAT_BOLD = "Montserrat-Bold"
         const val MONTSERRAT_SEMI_BOLD = "Montserrat-SemiBold"
         const val MONTSERRAT_BLACK = "Montserrat-Black"
         const val MONTSERRAT_REGULAR = "Montserrat-Regular"

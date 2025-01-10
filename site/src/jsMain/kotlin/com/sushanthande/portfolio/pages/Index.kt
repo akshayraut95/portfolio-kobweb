@@ -15,6 +15,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.style.toModifier
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.browser.document
 import org.jetbrains.compose.web.css.Position
@@ -26,13 +27,14 @@ import org.jetbrains.compose.web.css.px
 @Composable
 fun HomePage() {
     val pageContext = rememberPageContext()
+    val breakpoint = rememberBreakpoint()
     Row(
         Modifier.fillMaxWidth()
     ) {
         PageLayout(Res.String.NAME) {
             Box {
                 Column {
-                    Home(ctx = pageContext)
+                    Home(ctx = pageContext, breakpoint = breakpoint)
 
                     About(colorMode = ColorMode.current)
 
@@ -82,5 +84,4 @@ fun PageLayout(title: String, content: @Composable ColumnScope.() -> Unit) {
     }
 
     NavHeader(modifier = Modifier.position(Position.Fixed).top(0.px))
-
 }

@@ -169,16 +169,60 @@ val DesignationStyle = CssStyle {
             .fontSize(15.px)
     }
     Breakpoint.SM {
-        Modifier.fontSize(15.px)
+        Modifier.fontSize(18.px)
     }
     Breakpoint.MD {
-        Modifier.fontSize(20.px)
+        Modifier.fontSize(22.px)
     }
     Breakpoint.LG {
         Modifier.fontSize(25.px)
     }
 }
 
+val ResumeButtonStyle = CssStyle {
+    base {
+        Modifier
+            .width(70.px)
+            .height(30.px)
+            .fontSize(12.px)
+    }
+    Breakpoint.SM {
+        Modifier.width(80.px)
+            .height(35.px)
+            .fontSize(12.px)
+
+    }
+    Breakpoint.MD {
+        Modifier.width(90.px)
+            .height(40.px)
+            .fontSize(13.px)
+    }
+    Breakpoint.LG {
+        Modifier.width(100.px)
+            .height(40.px)
+            .fontSize(14.px)
+    }
+
+    hover {
+        Modifier.scale(1.1)
+    }
+}
+
+val NavigationMenuStyle = CssStyle {
+    base {
+        Modifier.fontSize(12.px)
+    }
+    Breakpoint.SM {
+        Modifier.fontSize(12.px)
+
+    }
+    Breakpoint.MD {
+        Modifier.fontSize(14.px)
+    }
+    Breakpoint.LG {
+        Modifier.fontSize(16.px)
+    }
+}
 
 val HeroSectionStyle = CssStyle {
     base {
@@ -209,6 +253,38 @@ val HeroSectionStyle = CssStyle {
         Modifier
             .width(100.percent)
             .fontSize(3.cssRem)
+            .height(100.vh)
+    }
+}
+
+val HomeSectionStyle = CssStyle {
+    base {
+        Modifier
+            .width(100.percent)
+            .height(100.vh)
+            .padding(top = 50.px)
+    }
+    Breakpoint.ZERO {
+        Modifier
+            .width(100.percent)
+            .height(100.vh)
+            .padding(top = 50.px)
+    }
+    Breakpoint.SM {
+        Modifier
+            .width(100.percent)
+            .height(100.vh)
+            .padding(top = 50.px)
+    }
+    Breakpoint.MD {
+        Modifier
+            .width(100.percent)
+            .height(100.vh)
+            .padding(top = 50.px)
+    }
+    Breakpoint.LG {
+        Modifier
+            .width(100.percent)
             .height(100.vh)
     }
 }
