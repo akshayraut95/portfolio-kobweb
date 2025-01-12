@@ -66,13 +66,63 @@ val FooterStyle = CssStyle.base {
 val BackToTopButtonStyle = CssStyle {
     base {
         Modifier
+            .size(30.px)
+            .borderRadius(100.percent)
+            .margin(
+                right = 10.px,
+                bottom = 30.px
+            )
+            .cursor(Cursor.Pointer)
+            .styleModifier {
+                property("pointer-events", "auto")
+            }
+
+    }
+
+    Breakpoint.SM {
+        Modifier
+            .size(30.px)
+            .borderRadius(100.percent)
+            .margin(
+                right = 20.px,
+                bottom = 30.px
+            )
+            .styleModifier {
+                property("pointer-events", "auto")
+            }
+            .transition(
+                CSSTransition(
+                    property = "translate",
+                    duration = 200.ms, timingFunction = AnimationTimingFunction.Ease
+                )
+            )
+    }
+    Breakpoint.MD {
+        Modifier
+            .size(40.px)
+            .borderRadius(100.percent)
+            .margin(
+                right = 20.px,
+                bottom = 30.px
+            )
+            .styleModifier {
+                property("pointer-events", "auto")
+            }
+            .transition(
+                CSSTransition(
+                    property = "translate",
+                    duration = 200.ms, timingFunction = AnimationTimingFunction.Ease
+                )
+            )
+    }
+    Breakpoint.LG {
+        Modifier
             .size(50.px)
             .borderRadius(100.percent)
             .margin(
                 right = 40.px,
                 bottom = 40.px
             )
-            .cursor(Cursor.Pointer)
             .styleModifier {
                 property("pointer-events", "auto")
             }
@@ -148,10 +198,10 @@ val ProfileImageStyle = CssStyle {
 }
 
 val AboutProfileImageStyle = CssStyle {
-    base {
+    Breakpoint.ZERO {
         Modifier
-            .height(320.px)
-            .width(280.px)
+            .height(280.px)
+            .width(240.px)
     }
     Breakpoint.SM {
         Modifier
@@ -238,7 +288,7 @@ val AboutSectionDesignationStyle = CssStyle {
 val AboutTextStyle = CssStyle {
     base {
         Modifier
-            .fontSize(12.px)
+            .fontSize(12.5.px)
     }
     Breakpoint.SM {
         Modifier.fontSize(12.5.px)
@@ -297,13 +347,13 @@ val SkillIconStyle = CssStyle {
 }
 
 val SkillTitleStyle = CssStyle {
-    base {
+    Breakpoint.ZERO {
         Modifier
-            .fontSize(9.8.px)
+            .fontSize(12.5.px)
     }
     Breakpoint.SM {
         Modifier
-            .fontSize(12.px)
+            .fontSize(12.5.px)
     }
     Breakpoint.MD {
         Modifier
@@ -377,7 +427,6 @@ val HomeSectionStyle = CssStyle {
     Breakpoint.ZERO {
         Modifier
             .width(100.percent)
-            .height(100.vh)
             .padding(top = 50.px)
     }
     Breakpoint.SM {

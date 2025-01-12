@@ -11,7 +11,6 @@ import com.sushanthande.portfolio.utils.DataRepository
 import com.sushanthande.portfolio.utils.Res
 import com.sushanthande.portfolio.utils.Res.String.SKILLS_TITLE
 import com.varabyte.kobweb.browser.util.kebabCaseToTitleCamelCase
-import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.MixBlendMode
 import com.varabyte.kobweb.compose.css.mixBlendMode
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement

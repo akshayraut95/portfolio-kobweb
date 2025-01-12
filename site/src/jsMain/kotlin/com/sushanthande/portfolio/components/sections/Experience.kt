@@ -34,7 +34,7 @@ fun Experience() {
 
         SimpleGrid(
             numColumns = numColumns(base = 1, md = 3),
-            modifier = Modifier.fillMaxWidth().padding(20.px)
+            modifier = Modifier.fillMaxWidth().padding(top = 20.px)
         ) {
             DataRepository.getExperiences().forEach { experienceItem ->
                 ExperienceItem(experienceModel = experienceItem)
@@ -74,7 +74,7 @@ fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifi
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_MEDIUM)
-                    .fontSize(12.px)
+                    .fontSize(12.5.px)
                     .margin(top = 5.px)
             )
 
@@ -88,7 +88,7 @@ fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifi
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_MEDIUM)
-                    .fontSize(12.px)
+                    .fontSize(12.5.px)
                     .margin(top = 5.px)
             )
 
@@ -102,7 +102,7 @@ fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifi
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
-                    .fontSize(13.px)
+                    .fontSize(13.5.px)
                     .margin(top = 10.px)
             )
 
@@ -116,7 +116,7 @@ fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifi
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_REGULAR)
-                    .fontSize(12.px).margin(top = 5.px).textAlign(
+                    .fontSize(12.5.px).margin(top = 5.px).textAlign(
                         TextAlign.Justify
                     )
             )

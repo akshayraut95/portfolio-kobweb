@@ -26,6 +26,7 @@ object Res {
         const val LINKEDIN_URL = "https://www.linkedin.com/in/sushanthande/"
         const val MEDIUM_URL = "https://medium.com/@sushanthande1"
         const val X_URL = "https://x.com/SushantHande1"
+        const val RESUME_LINK = "https://drive.google.com/drive/folders/1OIPb0odi4aAs44EzP-DvqUL1Zr2AZdVt?usp=sharing"
     }
 
     object Drawable {
@@ -44,7 +45,7 @@ object Res {
         const val KOTLIN_MULTIPLATFORM = "/images/skills/kotlin-multiplatform.png"
         const val JETPACK_COMPOSE = "/images/skills/jetpack-compose.png"
         const val ANDROID_JETPACK = "/images/skills/android-jetpack.svg"
-        const val ANDROID_STUDIO = "/images/skills/android-studio.png"
+        const val ANDROID_STUDIO = "/images/skills/android-studio.svg"
         const val JSON = "/images/skills/json.png"
 
         // Experience

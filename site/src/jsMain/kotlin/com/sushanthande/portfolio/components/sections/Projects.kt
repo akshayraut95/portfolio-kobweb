@@ -38,7 +38,7 @@ fun Projects(ctx: PageContext) {
 
         SimpleGrid(
             numColumns = numColumns(base = 1, sm = 2, md = 3, lg = 3),
-            modifier = Modifier.fillMaxWidth().padding(20.px)
+            modifier = Modifier.fillMaxWidth().padding(top = 20.px)
         ) {
             DataRepository.getProjects().forEach { projectModel ->
                 ProjectItem(projectModel) { selectedProjectModel ->
@@ -89,7 +89,7 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
                     Spacer()
 
                     Image(
-                        src = Res.Drawable.PLAY_STORE,
+                        src = if (projectModel.isOpenSourced.not()) Res.Drawable.PLAY_STORE else Res.Drawable.GITHUB,
                         modifier = ShareButtonStyle.toModifier().then(modifier.size(24.px))
                             .onClick { onClick(projectModel) }
                     )
@@ -106,13 +106,13 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
-                    .fontSize(12.px).margin(left = 10.px)
+                    .fontSize(13.5.px)
                     .margin(left = 10.px, top = 10.px)
             )
 
             SpanText(
                 text = projectModel.skills,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
                     .color(
                         when (ColorMode.current) {
                             ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
@@ -120,8 +120,7 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_REGULAR)
-                    .fontSize(12.px).margin(left = 10.px, top = 5.px)
-
+                    .fontSize(12.5.px).margin(leftRight = 10.px, top = 5.px)
             )
 
             SpanText(
@@ -134,7 +133,7 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
-                    .fontSize(12.px).margin(left = 10.px)
+                    .fontSize(13.5.px)
                     .margin(left = 10.px, top = 10.px)
             )
 
@@ -148,7 +147,7 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_REGULAR)
-                    .fontSize(12.px).margin(left = 10.px, right = 10.px, top = 5.px).textAlign(
+                    .fontSize(12.5.px).margin(left = 10.px, right = 10.px, top = 5.px).textAlign(
                         TextAlign.Justify
                     )
 
@@ -183,7 +182,7 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
                                 }
                             )
                             .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
-                            .fontSize(12.px)
+                            .fontSize(13.5.px)
                             .margin(top = 10.px),
                     )
                 }
@@ -191,4 +190,3 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
         }
     }
 }
-
