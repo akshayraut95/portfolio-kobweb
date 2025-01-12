@@ -147,6 +147,30 @@ val ProfileImageStyle = CssStyle {
     }
 }
 
+val AboutProfileImageStyle = CssStyle {
+    base {
+        Modifier
+            .height(320.px)
+            .width(280.px)
+    }
+    Breakpoint.SM {
+        Modifier
+            .height(300.px)
+            .width(250.px)
+    }
+    Breakpoint.MD {
+        Modifier
+            .height(400.px)
+            .width(350.px)
+    }
+    Breakpoint.LG {
+        Modifier
+            .height(450.px)
+            .width(400.px)
+    }
+}
+
+
 val ProfileHeadingStyle = CssStyle {
     base {
         Modifier
@@ -163,6 +187,22 @@ val ProfileHeadingStyle = CssStyle {
     }
 }
 
+val AboutSectionHeadingStyle = CssStyle {
+    base {
+        Modifier
+            .fontSize(20.px)
+    }
+    Breakpoint.SM {
+        Modifier.fontSize(20.px)
+    }
+    Breakpoint.MD {
+        Modifier.fontSize(25.px)
+    }
+    Breakpoint.LG {
+        Modifier.fontSize(35.px)
+    }
+}
+
 val DesignationStyle = CssStyle {
     base {
         Modifier
@@ -176,6 +216,38 @@ val DesignationStyle = CssStyle {
     }
     Breakpoint.LG {
         Modifier.fontSize(25.px)
+    }
+}
+
+val AboutSectionDesignationStyle = CssStyle {
+    base {
+        Modifier
+            .fontSize(11.5.px)
+    }
+    Breakpoint.SM {
+        Modifier.fontSize(12.px)
+    }
+    Breakpoint.MD {
+        Modifier.fontSize(15.px)
+    }
+    Breakpoint.LG {
+        Modifier.fontSize(18.px)
+    }
+}
+
+val AboutTextStyle = CssStyle {
+    base {
+        Modifier
+            .fontSize(12.px)
+    }
+    Breakpoint.SM {
+        Modifier.fontSize(12.5.px)
+    }
+    Breakpoint.MD {
+        Modifier.fontSize(13.px)
+    }
+    Breakpoint.LG {
+        Modifier.fontSize(14.px)
     }
 }
 
@@ -208,6 +280,41 @@ val ResumeButtonStyle = CssStyle {
     }
 }
 
+val SkillIconStyle = CssStyle {
+    base {
+        Modifier.size(34.px)
+    }
+    Breakpoint.SM {
+        Modifier.size(34.px)
+
+    }
+    Breakpoint.MD {
+        Modifier.size(38.px)
+    }
+    Breakpoint.LG {
+        Modifier.size(42.px)
+    }
+}
+
+val SkillTitleStyle = CssStyle {
+    base {
+        Modifier
+            .fontSize(9.8.px)
+    }
+    Breakpoint.SM {
+        Modifier
+            .fontSize(12.px)
+    }
+    Breakpoint.MD {
+        Modifier
+            .fontSize(13.px)
+    }
+    Breakpoint.LG {
+        Modifier
+            .fontSize(14.px)
+    }
+}
+
 val NavigationMenuStyle = CssStyle {
     base {
         Modifier.fontSize(12.px)
@@ -221,6 +328,9 @@ val NavigationMenuStyle = CssStyle {
     }
     Breakpoint.LG {
         Modifier.fontSize(16.px)
+    }
+    Breakpoint.XL {
+        Modifier.fontSize(18.px)
     }
 }
 

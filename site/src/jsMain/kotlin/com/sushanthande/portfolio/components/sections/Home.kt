@@ -82,7 +82,7 @@ fun Home(
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center,
-                modifier = Modifier.margin(top = 20.px)
+                modifier = Modifier.margin(top = 15.px)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,

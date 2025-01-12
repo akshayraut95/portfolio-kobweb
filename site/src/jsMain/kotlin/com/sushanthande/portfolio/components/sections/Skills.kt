@@ -3,6 +3,8 @@ package com.sushanthande.portfolio.components.sections
 import androidx.compose.runtime.Composable
 import com.sushanthande.portfolio.HeroSectionStyle
 import com.sushanthande.portfolio.IconsStyle
+import com.sushanthande.portfolio.SkillIconStyle
+import com.sushanthande.portfolio.SkillTitleStyle
 import com.sushanthande.portfolio.components.widgets.SectionTitle
 import com.sushanthande.portfolio.models.SkillModel
 import com.sushanthande.portfolio.utils.DataRepository
@@ -61,7 +63,7 @@ fun SkillItem(skillModel: SkillModel, modifier: Modifier) {
     Column(IconsStyle.toModifier().then(modifier.fillMaxWidth().padding(20.px)), horizontalAlignment = Alignment.CenterHorizontally) {
         Image(
             src = skillModel.drawable,
-            modifier = Modifier.size(42.px)
+            modifier = SkillIconStyle.toModifier()
                 .styleModifier {
                     mixBlendMode(MixBlendMode.Normal)
                 }
@@ -69,7 +71,7 @@ fun SkillItem(skillModel: SkillModel, modifier: Modifier) {
 
         SpanText(
             text = skillModel.title,
-            modifier = Modifier.fontSize(FontSize.Small)
+            modifier = SkillTitleStyle.toModifier()
                 .padding(top = 10.px)
                 .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
                 .color(
