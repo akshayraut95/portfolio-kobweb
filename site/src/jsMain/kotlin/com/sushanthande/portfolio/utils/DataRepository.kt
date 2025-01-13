@@ -10,9 +10,9 @@ object DataRepository {
         add(SkillModel(drawable = Res.Drawable.ANDROID, title = "Android"))
         add(SkillModel(drawable = Res.Drawable.JAVA, title = "Java"))
         add(SkillModel(drawable = Res.Drawable.KOTLIN, title = "Kotlin"))
-        add(SkillModel(drawable = Res.Drawable.ANDROID_JETPACK, title = "Android Jetpack"))
-        add(SkillModel(drawable = Res.Drawable.JETPACK_COMPOSE, title = "Jetpack Compose"))
-        add(SkillModel(drawable = Res.Drawable.KOTLIN_MULTIPLATFORM, title = "Kotlin Multiplatform"))
+        add(SkillModel(drawable = Res.Drawable.ANDROID_JETPACK, title = "Jetpack"))
+        add(SkillModel(drawable = Res.Drawable.JETPACK_COMPOSE, title = "Compose"))
+        add(SkillModel(drawable = Res.Drawable.KOTLIN_MULTIPLATFORM, title = "KMP"))
         add(SkillModel(drawable = Res.Drawable.JSON, title = "JSON"))
         add(SkillModel(drawable = Res.Drawable.FIGMA, title = "Figma"))
         add(SkillModel(drawable = Res.Drawable.FIREBASE, title = "Firebase"))
@@ -50,7 +50,7 @@ object DataRepository {
                 employerName = "Entrata",
                 duration = "July 18 - Sept 21",
                 logo = Res.Drawable.ENTRATA,
-                roleAndResponsibilities = "Working at Entrata has made long lasting impact on my career. At Entrata, I was working as an individual contributor in the team of 3 Android developers. Strictly following coding standards and meeting deadlines made me more disciplined. I worked on Entrata Facilities app, that was my first project built using Kotlin programming language."
+                roleAndResponsibilities = "Working at Entrata has made long lasting impact on my career. At Entrata, I was working as an individual contributor in the team of 3 Android developers. Strictly following coding standards and meeting deadlines made me more disciplined. I worked on Entrata Facilities app, that was my first project built using Kotlin programming language. I worked at Entrata for 3 years and 2 months."
             )
         )
         add(
@@ -103,11 +103,12 @@ object DataRepository {
         )
         add(
             ProjectModel(
-                logo = Res.Drawable.SMART_CAR,
-                name = "Smart Car App",
-                skills = "Android, Core Java, Kotlin, Jetpack Compose, Material Design, Git",
-                description = "This project developed a mobile application for an IoT-based car tracking and monitoring system. Key features include real-time data acquisition like fuel level, speed, location, geofencing, remote engine start/stop, vehicle health diagnostics, trip history and crash reporting. These valuable insights into vehicle status and location, enhancing safety, security, and efficiency.",
-                appUrl = "https://play.google.com/store/apps/details?id=in.bajajfinservmarkets.app&hl=en_IN"
+                logo = Res.Drawable.KOTLIN_MULTIPLATFORM,
+                name = "MusicApp KMP",
+                skills = "Kotlin, Compose Multiplatform, Media Player, Ktor, Moshi, Decompose",
+                description = "This is a music player app built using Kotlin Multiplatform and Compose Multiplatform UI that works on Android, iOS, Desktop, and Web platforms. It uses the spotify api for fetching the top 50 charts and getting the trending albums. This repository has been listed as KMP sample on official website of Jetbrains and I have been working as a open source contributor to this project." ,
+                appUrl = "https://github.com/SEAbdulbasit/MusicApp-KMP",
+                isOpenSourced = true
             )
         )
         add(

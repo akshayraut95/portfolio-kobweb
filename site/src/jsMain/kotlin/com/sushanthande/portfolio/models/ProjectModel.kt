@@ -5,5 +5,6 @@ data class ProjectModel(
     val name: String,
     val skills: String,
     val description: String,
-    val appUrl: String
+    val appUrl: String,
+    val isOpenSourced : Boolean = false
 )

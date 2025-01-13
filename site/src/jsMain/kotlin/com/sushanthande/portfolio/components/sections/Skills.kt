@@ -11,7 +11,6 @@ import com.sushanthande.portfolio.utils.DataRepository
 import com.sushanthande.portfolio.utils.Res
 import com.sushanthande.portfolio.utils.Res.String.SKILLS_TITLE
 import com.varabyte.kobweb.browser.util.kebabCaseToTitleCamelCase
-import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.MixBlendMode
 import com.varabyte.kobweb.compose.css.mixBlendMode
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -25,13 +24,14 @@ import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.Surface
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun Skills() {
+fun Skills(breakpoint: Breakpoint) {
 
     Column(
         modifier = HeroSectionStyle.toModifier().id(SKILLS_TITLE), horizontalAlignment = Alignment.CenterHorizontally,

@@ -18,13 +18,14 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun Experience() {
+fun Experience(breakpoint: Breakpoint) {
     Column(
         modifier = HeroSectionStyle.toModifier().id(EXPERIENCE_TITLE),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -34,7 +35,7 @@ fun Experience() {
 
         SimpleGrid(
             numColumns = numColumns(base = 1, md = 3),
-            modifier = Modifier.fillMaxWidth().padding(20.px)
+            modifier = Modifier.fillMaxWidth().padding(top = 20.px)
         ) {
             DataRepository.getExperiences().forEach { experienceItem ->
                 ExperienceItem(experienceModel = experienceItem)
@@ -74,7 +75,7 @@ fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifi
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_MEDIUM)
-                    .fontSize(12.px)
+                    .fontSize(12.5.px)
                     .margin(top = 5.px)
             )
 
@@ -88,7 +89,7 @@ fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifi
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_MEDIUM)
-                    .fontSize(12.px)
+                    .fontSize(12.5.px)
                     .margin(top = 5.px)
             )
 
@@ -102,7 +103,7 @@ fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifi
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
-                    .fontSize(13.px)
+                    .fontSize(13.5.px)
                     .margin(top = 10.px)
             )
 
@@ -116,7 +117,7 @@ fun ExperienceItem(experienceModel: ExperienceModel, modifier: Modifier = Modifi
                         }
                     )
                     .fontFamily(Res.Font.MONTSERRAT_REGULAR)
-                    .fontSize(12.px).margin(top = 5.px).textAlign(
+                    .fontSize(12.5.px).margin(top = 5.px).textAlign(
                         TextAlign.Justify
                     )
             )

@@ -21,6 +21,7 @@ import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.shapes.Circle
 import com.varabyte.kobweb.silk.theme.shapes.clip
 import org.jetbrains.compose.web.css.LineStyle
+import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
 
 @Composable
@@ -115,7 +116,7 @@ fun Home(
                 Box(
                     modifier = ResumeButtonStyle.toModifier()
                         .margin(left = 5.px)
-                        .onClick { ctx.router.navigateTo("https://www.linkedin.com/in/sushanthande/") }
+                        .onClick { ctx.router.navigateTo(Res.String.RESUME_LINK) }
                         .border(0.1.px, LineStyle.Solid, Res.Colors.GREY)
                         .borderRadius(r = 5.px)
                         .background(

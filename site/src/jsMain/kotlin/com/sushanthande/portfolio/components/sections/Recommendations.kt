@@ -36,9 +36,9 @@ import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun Recommendations(ctx: PageContext) {
+fun Recommendations(ctx: PageContext, breakpoint: Breakpoint) {
     Column(
-        modifier = HeroSectionStyle.toModifier().id(RECOMMENDATIONS_TITLE).padding(bottom = if (rememberBreakpoint() == (Breakpoint.ZERO) || rememberBreakpoint() == (Breakpoint.SM)) 20.px else 0.px),
+        modifier = HeroSectionStyle.toModifier().id(RECOMMENDATIONS_TITLE),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -46,7 +46,7 @@ fun Recommendations(ctx: PageContext) {
 
         SimpleGrid(
             numColumns = numColumns(base = 1, sm = 1, md = 1, lg = 1),
-            modifier = Modifier.fillMaxWidth().padding(left = 20.px, right = 20.px, top = 20.px)
+            modifier = Modifier.fillMaxWidth().padding(top = 20.px)
         ) {
             RecommendationItem(DataRepository.getMajorLinkedinRecommendation()) { selectedRecommendation ->
                 ctx.router.navigateTo(selectedRecommendation.recommendationLink)
@@ -55,7 +55,7 @@ fun Recommendations(ctx: PageContext) {
 
         SimpleGrid(
             numColumns = numColumns(base = 1, sm = 2, md = 3, lg = 3),
-            modifier = Modifier.fillMaxWidth().padding(left = 20.px, right = 20.px)
+            modifier = Modifier.fillMaxWidth().padding(bottom = if (rememberBreakpoint() == (Breakpoint.ZERO) || rememberBreakpoint() == (Breakpoint.MD)) 20.px else 0.px),
         ) {
             DataRepository.getLinkedinRecommendations().forEach { linkedInRecommendation ->
                 RecommendationItem(linkedInRecommendation, shouldShowRecommendation = false) { selectedRecommendation ->
@@ -109,7 +109,7 @@ fun RecommendationItem(
                                     }
                                 )
                                 .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
-                                .fontSize(13.px).margin(left = 10.px)
+                                .fontSize(13.5.px).margin(left = 10.px)
                         )
 
                         SpanText(
@@ -122,7 +122,7 @@ fun RecommendationItem(
                                     }
                                 )
                                 .fontFamily(Res.Font.MONTSERRAT_REGULAR)
-                                .fontSize(11.px).margin(left = 10.px, top = 2.px)
+                                .fontSize(12.px).margin(left = 10.px, top = 2.px)
                         )
                     }
                 }
@@ -138,8 +138,8 @@ fun RecommendationItem(
                                 ColorMode.DARK -> Colors.White
                             }
                         )
-                        .fontFamily(Res.Font.MONTSERRAT_MEDIUM)
-                        .fontSize(12.px).margin(left = 10.px)
+                        .fontFamily(Res.Font.MONTSERRAT_REGULAR)
+                        .fontSize(12.5.px).margin(left = 10.px)
                         .margin(left = 10.px, top = 10.px)
                         .textAlign(
                             TextAlign.Justify
@@ -149,17 +149,16 @@ fun RecommendationItem(
 
         } else {
             Column(
-                modifier = modifier.fillMaxSize().padding(topBottom = if (rememberBreakpoint() == (Breakpoint.ZERO) || rememberBreakpoint() == (Breakpoint.SM)) 15.px else 0.px).onClick { onClick(recommendationModel) },
+                modifier = modifier.fillMaxSize()
+                    .padding(topBottom = if (rememberBreakpoint() == (Breakpoint.ZERO) || rememberBreakpoint() == (Breakpoint.SM)) 17.px else 0.px)
+                    .onClick { onClick(recommendationModel) },
                 verticalArrangement = Arrangement.Center,
             ) {
                 Row(
-                    HoverCursorStyle.toModifier(),
+                    HoverCursorStyle.toModifier().fillMaxSize(),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    FaLinkedin(
-                        modifier = Modifier.margin(left = 10.px),
-                        size = IconSize.XS
-                    )
+                    FaLinkedin(modifier = Modifier.margin(left = 10.px), size = IconSize.SM)
 
                     SpanText(
                         text = recommendationModel.recommendation,
@@ -171,7 +170,7 @@ fun RecommendationItem(
                                 }
                             )
                             .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
-                            .fontSize(13.px)
+                            .fontSize(13.5.px)
                     )
 
                     Image(
@@ -179,7 +178,7 @@ fun RecommendationItem(
                             ColorMode.LIGHT -> Res.Drawable.SHARE_ARROW_DARK
                             ColorMode.DARK -> Res.Drawable.SHARE_ARROW_LIGHT
                         },
-                        modifier = Modifier.size(24.px).margin(left = 10.px)
+                        modifier = Modifier.size(20.px).margin(left = 10.px)
                     )
                 }
             }
