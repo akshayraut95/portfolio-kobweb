@@ -38,13 +38,13 @@ fun HomePage() {
 
                     About(colorMode = ColorMode.current)
 
-                    Skills()
+                    Skills(breakpoint = breakpoint)
 
-                    Experience()
+                    Experience(breakpoint = breakpoint)
 
-                    Projects(ctx = pageContext)
+                    Projects(ctx = pageContext, breakpoint = breakpoint)
 
-                    Recommendations(ctx = pageContext)
+                    Recommendations(ctx = pageContext, breakpoint = breakpoint)
                 }
             }
         }

@@ -156,7 +156,7 @@ val SectionTitleStyle = CssStyle {
         Modifier.fontSize(FontSize.XLarge)
     }
     Breakpoint.LG {
-        Modifier.fontSize(FontSize.XXLarge)
+        Modifier.fontSize(FontSize.XLarge)
     }
 }
 
@@ -389,25 +389,25 @@ val HeroSectionStyle = CssStyle {
         Modifier
             .width(100.percent)
             .fontSize(3.cssRem)
-            .padding(top = 50.px)
+            .padding(top = 6.cssRem)
     }
     Breakpoint.ZERO {
         Modifier
             .width(100.percent)
             .fontSize(2.5.cssRem)
-            .padding(top = 50.px)
+            .padding(top = 6.cssRem)
     }
     Breakpoint.SM {
         Modifier
             .width(100.percent)
             .fontSize(2.5.cssRem)
-            .padding(top = 50.px)
+            .padding(top = 5.cssRem)
     }
     Breakpoint.MD {
         Modifier
             .width(100.percent)
             .fontSize(2.75.cssRem)
-            .padding(top = 50.px)
+            .padding(top = 6.cssRem)
     }
     Breakpoint.LG {
         Modifier

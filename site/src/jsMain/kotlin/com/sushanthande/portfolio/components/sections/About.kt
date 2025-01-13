@@ -28,8 +28,11 @@ import org.jetbrains.compose.web.css.px
 fun About(colorMode: ColorMode) {
     val breakpoint = rememberBreakpoint()
 
-    Column (modifier = HeroSectionStyle.toModifier().id(ABOUT_TITLE), horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center){
+    Column(
+        modifier = HeroSectionStyle.toModifier().id(ABOUT_TITLE),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
         SectionTitle(ABOUT_TITLE.kebabCaseToTitleCamelCase())
 
         Surface(modifier = Modifier.height(30.px)){}

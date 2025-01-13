@@ -20,6 +20,7 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.shapes.Rect
@@ -28,7 +29,7 @@ import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun Projects(ctx: PageContext) {
+fun Projects(ctx: PageContext, breakpoint: Breakpoint) {
     Column(
         modifier = HeroSectionStyle.toModifier().id(PROJECTS_TITLE),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -169,7 +170,7 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
                             ColorMode.LIGHT -> Res.Drawable.GITHUB
                             ColorMode.DARK -> Res.Drawable.GITHUB_WHITE
                         },
-                        modifier = Modifier.size(48.px)
+                        modifier = Modifier.size(40.px)
                     )
 
                     SpanText(

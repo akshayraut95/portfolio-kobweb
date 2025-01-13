@@ -36,10 +36,9 @@ import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun Recommendations(ctx: PageContext) {
+fun Recommendations(ctx: PageContext, breakpoint: Breakpoint) {
     Column(
-        modifier = HeroSectionStyle.toModifier().id(RECOMMENDATIONS_TITLE)
-            .padding(bottom = if (rememberBreakpoint() == (Breakpoint.ZERO) || rememberBreakpoint() == (Breakpoint.SM)) 20.px else 0.px),
+        modifier = HeroSectionStyle.toModifier().id(RECOMMENDATIONS_TITLE),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -56,7 +55,7 @@ fun Recommendations(ctx: PageContext) {
 
         SimpleGrid(
             numColumns = numColumns(base = 1, sm = 2, md = 3, lg = 3),
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth().padding(bottom = if (rememberBreakpoint() == (Breakpoint.ZERO) || rememberBreakpoint() == (Breakpoint.MD)) 20.px else 0.px),
         ) {
             DataRepository.getLinkedinRecommendations().forEach { linkedInRecommendation ->
                 RecommendationItem(linkedInRecommendation, shouldShowRecommendation = false) { selectedRecommendation ->
