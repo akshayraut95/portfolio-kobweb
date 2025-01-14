@@ -1,53 +1,53 @@
-This is a [Kobweb](https://github.com/varabyte/kobweb) project bootstrapped with the `app/empty` template.
+## Sushant Hande's Portfolio
 
-This template is useful if you already know what you're doing and just want a clean slate. By default, it
-just creates a blank home page (which prints to the console so you can confirm it's working)
+<img src="images/portfolio.png" width="1713" height="1366">
 
-If you are still learning, consider instantiating the `app` template (or one of the examples) to see actual,
-working projects.
+A modern, composable portfolio website built with the Kobweb framework. This repository hosts the source code for my personal portfolio website, showcasing my skills, projects, and experiences.
+
+## [Try it Live]()
+
+  <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-a503fc?logo=kotlin&logoColor=white&style=for-the-badge"/></a>
+  <img alt="Compose HTML" src="https://img.shields.io/static/v1?style=for-the-badge&message=Compose+HTML&color=4285F4&logo=Jetpack+Compose&logoColor=FFFFFF&label="/></a>
+  [![Hits](https://hits.sh/github.com/Sushant-Hande/portfolio-kobweb.svg?style=for-the-badge&label=Total%20Views)](https://hits.sh/github.com/Sushant-Hande/portfolio-kobweb/)
+
+
+## Features
+1. **Portfolio Sections** - The website includes sections for showcasing my skills, projects, and experiences.
+2. **Composable UI** - The website is built using the Compose HTML library, which allows for a composable and declarative UI.
+3. **Dark Mode** - The website supports dark mode, which can be toggled by the user.
+4. **Responsive Design** - The website is designed to be responsive and work on all devices.
+
+
+## Technology Stack
+1. [Kotlin](https://kotlinlang.org/) - Kotlin is a modern programming language that makes developers happier and more productive.
+2. [Compose HTML](https://github.com/JetBrains/compose-multiplatform#:~:text=Libraries-,Compose%20HTML,-Compose%20HTML%20is) - Compose HTML is a library for creating web user interfaces with HTML and CSS.
+3. [Kobweb](https://github.com/varabyte/kobweb) - Kobweb is an opinionated Kotlin framework for creating websites and web apps, built on top of Compose HTML.
+
+
+## Mockups
+
+### Desktop
+<img src="images/portfolio-browser-mockup.png" >
+
+### Mobile
+<img src="images/iphone-multiple-screens-mockup.png" >
+
 
 ## Getting Started
 
-First, run the development server by typing the following command in a terminal under the `site` folder:
-
+**1. Clone the repository:**
 ```bash
-$ cd site
-$ kobweb run
+  $ git clone https://github.com/Sushant-Hande/portfolio-kobweb.git
 ```
 
-Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
-
-You can use any editor you want for the project, but we recommend using **IntelliJ IDEA Community Edition** downloaded
-using the [Toolbox App](https://www.jetbrains.com/toolbox-app/).
-
-Press `Q` in the terminal to gracefully stop the server.
-
-### Live Reload
-
-Feel free to edit / add / delete new components, pages, and API endpoints! When you make any changes, the site will
-indicate the status of the build and automatically reload when ready.
-
-## Exporting the Project
-
-When you are ready to ship, you should shutdown the development server and then export the project using:
+**2. Run the development server by typing the following command in a terminal under the `site` folder:**
 
 ```bash
-kobweb export
+  $ cd site
+  $ kobweb run
 ```
 
-When finished, you can run a Kobweb server in production mode:
+**3. Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.**
 
-```bash
-kobweb run --env prod
-```
-
-If you want to run this command in the Cloud provider of your choice, consider disabling interactive mode since nobody
-is sitting around watching the console in that case anyway. To do that, use:
-
-```bash
-kobweb run --env prod --notty
-```
-
-Kobweb also supports exporting to a static layout which is compatible with static hosting providers, such as GitHub
-Pages, Netlify, Firebase, any presumably all the others. You can read more about that approach here:
-https://bitspittle.dev/blog/2022/staticdeploy
+You can use any editor you want for the project but, it is recommended to use **IntelliJ IDEA Community Edition** which can be downloaded
+using the [Toolbox App](https://www.jetbrains.com/toolbox-app/). Press `Q` in the terminal to gracefully stop the server.
