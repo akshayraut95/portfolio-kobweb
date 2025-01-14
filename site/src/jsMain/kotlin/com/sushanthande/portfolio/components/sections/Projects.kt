@@ -90,7 +90,10 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
                     Spacer()
 
                     Image(
-                        src = if (projectModel.isOpenSourced.not()) Res.Drawable.PLAY_STORE else Res.Drawable.GITHUB,
+                        src = if (projectModel.isOpenSourced.not()) Res.Drawable.PLAY_STORE else when (ColorMode.current) {
+                            ColorMode.LIGHT -> Res.Drawable.GITHUB
+                            ColorMode.DARK -> Res.Drawable.GITHUB_WHITE
+                        },
                         modifier = ShareButtonStyle.toModifier().then(modifier.size(24.px))
                             .onClick { onClick(projectModel) }
                     )
