@@ -4,7 +4,7 @@
 
 A modern, composable portfolio website built with the Kobweb framework. This repository hosts the source code for my personal portfolio website, showcasing my skills, projects, and experiences.
 
-## [Try it Live]()
+## [Try it Live](https://sushanthande.dev)
 
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-a503fc?logo=kotlin&logoColor=white&style=for-the-badge"/></a>
   <img alt="Compose HTML" src="https://img.shields.io/static/v1?style=for-the-badge&message=Compose+HTML&color=4285F4&logo=Jetpack+Compose&logoColor=FFFFFF&label="/></a>

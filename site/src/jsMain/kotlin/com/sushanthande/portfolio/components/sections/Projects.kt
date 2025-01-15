@@ -159,12 +159,11 @@ fun ProjectItem(projectModel: ProjectModel, modifier: Modifier = Modifier, onCli
         } else {
 
             Column(
-                modifier = modifier.fillMaxSize(),
+                modifier = ShareButtonStyle.toModifier().fillMaxSize().onClick { onClick(projectModel) },
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Column(
-                    ShareButtonStyle.toModifier().onClick { onClick(projectModel) },
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {

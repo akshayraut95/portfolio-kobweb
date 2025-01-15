@@ -74,5 +74,18 @@ fun Footer(
                 )
                 .fontSize(15.px)
         )
+
+        SpanText(
+            text = Res.String.VERSION,
+            modifier = Modifier
+                .fillMaxWidth()
+                .fontFamily(Res.Font.MONTSERRAT_REGULAR)
+                .textAlign(TextAlign.Center)
+                .color(
+                    Res.Colors.GREY
+                )
+                .fontSize(11.px)
+                .margin(top = 10.px)
+        )
     }
 }

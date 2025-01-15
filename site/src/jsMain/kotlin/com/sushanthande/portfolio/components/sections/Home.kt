@@ -30,7 +30,7 @@ fun Home(
     breakpoint: Breakpoint
 ) {
     Column(
-        modifier = HomeSectionStyle.toModifier().id(Res.String.HOME_TITLE),
+        modifier = HomeSectionStyle.toModifier().id(Res.String.HOME_TITLE).margin(top = (-4).cssRem),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
