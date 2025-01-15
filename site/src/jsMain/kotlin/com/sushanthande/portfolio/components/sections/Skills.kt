@@ -12,6 +12,7 @@ import com.sushanthande.portfolio.utils.Res
 import com.sushanthande.portfolio.utils.Res.String.SKILLS_TITLE
 import com.varabyte.kobweb.browser.util.kebabCaseToTitleCamelCase
 import com.varabyte.kobweb.compose.css.MixBlendMode
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.css.mixBlendMode
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -45,7 +46,7 @@ fun Skills(breakpoint: Breakpoint) {
             numColumns = numColumns(base = 2, sm = 2, md = 3, lg = 4),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(all = 12.px)
+                .padding(topBottom = 12.px)
                 .border(
                     0.1.px, LineStyle.Solid, Res.Colors.GREY
                 )
@@ -60,7 +61,10 @@ fun Skills(breakpoint: Breakpoint) {
 
 @Composable
 fun SkillItem(skillModel: SkillModel, modifier: Modifier) {
-    Column(IconsStyle.toModifier().then(modifier.fillMaxWidth().padding(20.px)), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(
+        IconsStyle.toModifier().then(modifier.fillMaxWidth().padding(topBottom = 20.px)),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Image(
             src = skillModel.drawable,
             modifier = SkillIconStyle.toModifier()
@@ -73,13 +77,14 @@ fun SkillItem(skillModel: SkillModel, modifier: Modifier) {
             text = skillModel.title,
             modifier = SkillTitleStyle.toModifier()
                 .padding(top = 10.px)
+                .fillMaxWidth()
                 .fontFamily(Res.Font.MONTSERRAT_SEMI_BOLD)
                 .color(
                     when (ColorMode.current) {
                         ColorMode.LIGHT -> Res.Colors.GREEN_VOGUE
                         ColorMode.DARK -> Res.Colors.WHITE
                     }
-                )
+                ).textAlign(TextAlign.Center)
         )
     }
 }

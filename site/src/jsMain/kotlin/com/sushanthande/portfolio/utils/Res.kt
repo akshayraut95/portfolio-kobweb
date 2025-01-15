@@ -27,6 +27,7 @@ object Res {
         const val MEDIUM_URL = "https://medium.com/@sushanthande1"
         const val X_URL = "https://x.com/SushantHande1"
         const val RESUME_LINK = "https://drive.google.com/drive/folders/1OIPb0odi4aAs44EzP-DvqUL1Zr2AZdVt?usp=sharing"
+        const val VERSION = "Version: 1.0.0"
     }
 
     object Drawable {

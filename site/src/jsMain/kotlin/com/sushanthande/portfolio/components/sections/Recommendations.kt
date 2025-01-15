@@ -150,7 +150,7 @@ fun RecommendationItem(
         } else {
             Column(
                 modifier = modifier.fillMaxSize()
-                    .padding(topBottom = if (rememberBreakpoint() == (Breakpoint.ZERO) || rememberBreakpoint() == (Breakpoint.SM)) 17.px else 0.px)
+                    .padding(10.px)
                     .onClick { onClick(recommendationModel) },
                 verticalArrangement = Arrangement.Center,
             ) {
@@ -158,7 +158,13 @@ fun RecommendationItem(
                     HoverCursorStyle.toModifier().fillMaxSize(),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    FaLinkedin(modifier = Modifier.margin(left = 10.px), size = IconSize.SM)
+                    Box(
+                        modifier = ShareButtonStyle.toModifier()
+                            .then(Modifier.clip(shape = Rect(cornerRadius = 7.px)).height(40.px).width(40.px)),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        FaLinkedin(modifier = Modifier.align(Alignment.Center), size = IconSize.SM)
+                    }
 
                     SpanText(
                         text = recommendationModel.recommendation,

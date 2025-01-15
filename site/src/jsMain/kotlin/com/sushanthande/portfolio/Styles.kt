@@ -69,7 +69,7 @@ val BackToTopButtonStyle = CssStyle {
             .size(30.px)
             .borderRadius(100.percent)
             .margin(
-                right = 10.px,
+                right = 7.5.px,
                 bottom = 30.px
             )
             .cursor(Cursor.Pointer)
@@ -84,7 +84,7 @@ val BackToTopButtonStyle = CssStyle {
             .size(30.px)
             .borderRadius(100.percent)
             .margin(
-                right = 20.px,
+                right = 15.px,
                 bottom = 30.px
             )
             .styleModifier {
