@@ -9,7 +9,8 @@ A modern, composable portfolio website built with the Kobweb framework. This rep
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-a503fc?logo=kotlin&logoColor=white&style=for-the-badge"/></a>
   <img alt="Compose HTML" src="https://img.shields.io/static/v1?style=for-the-badge&message=Compose+HTML&color=4285F4&logo=Jetpack+Compose&logoColor=FFFFFF&label="/></a>
   [![Hits](https://hits.sh/github.com/Sushant-Hande/portfolio-kobweb.svg?style=for-the-badge&label=Total%20Views)](https://hits.sh/github.com/Sushant-Hande/portfolio-kobweb/)
-
+  
+## [Featured in Kotlin Weekly newsletter - Kotlin Weekly #442 ](https://mailchi.mp/kotlinweekly/kotlin-weekly-442#:~:text=Sushant%20Hande%27s%20Portfolio)
 
 ## Features
 1. Portfolio Sections - The website includes sections for showcasing my skills, projects, and experiences.
