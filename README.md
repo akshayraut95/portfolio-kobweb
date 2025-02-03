@@ -17,6 +17,7 @@ A modern, composable portfolio website built with the Kobweb framework. This rep
 2. Composable UI - The website is built using the Compose HTML library, which allows for a composable and declarative UI.
 3. Dark Mode - The website supports dark mode, which can be toggled by the user.
 4. Responsive Design - The website is designed to be responsive and work on all devices.
+5.good feautures and user friendly approach
 
 
 ## Technology Stack
